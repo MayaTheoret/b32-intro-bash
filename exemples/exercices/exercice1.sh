@@ -4,3 +4,9 @@
 read -p "Mot : " mot
 
 result=`wget -qO -http://dictionary.objectif8.com/exists.php?word=$mot`
+
+if [[ $result -gt 0 ]]
+    echo ok
+else
+    echo mot inexistant
+fi
